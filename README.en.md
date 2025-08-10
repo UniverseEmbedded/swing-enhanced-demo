@@ -236,7 +236,7 @@ Thanks to the contributions of the following open-source projects and communitie
 ## 📞 Contact Information
 
 -   **Author**: pama1234
--   **Email**: your-email@example.com
+-   **Email**: pama1234@163.com
 -   **Project Homepage**: [GitHub Repository](https://github.com/UniverseEmbedded/swing-enhanced-demo)
 -   **Issue Tracker**: [GitHub Issues](https://github.com/UniverseEmbedded/swing-enhanced-demo/issues)
 

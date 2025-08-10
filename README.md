@@ -256,7 +256,7 @@ swing-enhanced-demo/
 ## 📞 联系信息
 
 -   **作者**: pama1234
--   **邮箱**: your-email@example.com
+-   **QQ**: 3659347653
 -   **项目主页**: [GitHub Repository](https://github.com/UniverseEmbedded/swing-enhanced-demo)
 -   **问题反馈**: [GitHub Issues](https://github.com/UniverseEmbedded/swing-enhanced-demo/issues)
 
