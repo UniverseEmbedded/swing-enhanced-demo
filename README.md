@@ -8,6 +8,24 @@
 
 [English Version / 英文版](README.en.md)
 
+## 📸 应用截图
+
+<div align="center">
+
+| 图表功能 | 图表功能(英文版) |
+|:---:|:---:|
+| ![图表演示](doc/image/chart.png) | ![图表演示(英文)](doc/image/chart_en.png) |
+
+| 代码编辑器 | 表单布局 |
+|:---:|:---:|
+| ![代码编辑器](doc/image/code.png) | ![表单布局](doc/image/form.png) |
+
+| PDF生成功能 | 数据表格 |
+|:---:|:---:|
+| ![PDF生成](doc/image/pdf.png) | ![数据表格](doc/image/table.png) |
+
+</div>
+
 ## 🌟 功能特色
 
 ### 🎨 现代化界面
@@ -107,7 +125,7 @@ java -jar target/swing-enhanced-demo-1.0-SNAPSHOT.jar
 | Thumbnailator     | 0.4.20 | 图片处理库                   | [github.com/coobird/thumbnailator](https://github.com/coobird/thumbnailator) |
 | jSystemThemeDetector | 3.6    | 系统主题检测                 | [github.com/Dansoftowner/jSystemThemeDetector](https://github.com/Dansoftowner/jSystemThemeDetector) |
 
-## 📱 功能截图
+## 📱 功能详情
 
 ### 主界面
 -   🖥️ 现代化的多面板布局
@@ -117,9 +135,8 @@ java -jar target/swing-enhanced-demo-1.0-SNAPSHOT.jar
 
 ### 系统托盘菜单
 -   🖱️ 应用程序可最小化到系统托盘，通过右键点击托盘图标可弹出菜单。
--   👁️ 菜单选项包括“显示窗口”、“设置”和“退出程序”，方便快速操作。
+-   👁️ 菜单选项包括"显示窗口"、"设置"和"退出程序"，方便快速操作。
 -   💬 托盘图标工具提示文本支持多语言切换。
-    **(建议在此处添加托盘菜单的截图)**
 
 ### 特色功能
 -   📈 **动态图表**: 柱状图、饼图切换，数据实时更新

@@ -8,6 +8,24 @@ A modern Java Swing enhanced library demonstration application, showcasing how m
 
 [中文版 / Chinese Version](README.md)
 
+## 📸 Application Screenshots
+
+<div align="center">
+
+| Chart Features | Chart Features (English) |
+|:---:|:---:|
+| ![Chart Demo](doc/image/chart.png) | ![Chart Demo (English)](doc/image/chart_en.png) |
+
+| Code Editor | Form Layout |
+|:---:|:---:|
+| ![Code Editor](doc/image/code.png) | ![Form Layout](doc/image/form.png) |
+
+| PDF Generation | Data Table |
+|:---:|:---:|
+| ![PDF Generation](doc/image/pdf.png) | ![Data Table](doc/image/table.png) |
+
+</div>
+
 ## 🌟 Key Features
 
 ### 🎨 Modern Interface
@@ -107,7 +125,7 @@ java -jar target/swing-enhanced-demo-1.0-SNAPSHOT.jar
 | Thumbnailator        | 0.4.20  | Image Processing Library         | [github.com/coobird/thumbnailator](https://github.com/coobird/thumbnailator) |
 | jSystemThemeDetector | 3.6     | System Theme Detection           | [github.com/Dansoftowner/jSystemThemeDetector](https://github.com/Dansoftowner/jSystemThemeDetector) |
 
-## 📱 Screenshots
+## 📱 Feature Details
 
 ### Main Interface
 -   🖥️ Modern multi-panel layout
@@ -119,7 +137,6 @@ java -jar target/swing-enhanced-demo-1.0-SNAPSHOT.jar
 -   🖱️ The application can be minimized to the system tray, and a menu can be popped up by right-clicking the tray icon.
 -   👁️ Menu options include "Show Window", "Settings", and "Exit Application" for quick operations.
 -   💬 Tray icon tooltip text supports multi-language switching.
-    **(Suggested: Add a screenshot of the system tray menu here)**
 
 ### Featured Functionality
 -   📈 **Dynamic Charts**: Bar and pie chart switching, real-time data updates.
