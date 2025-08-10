@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE RSyntaxTheme SYSTEM "theme.dtd">
+<!--
+	Pama1234 Light Theme for RSyntaxTextArea
+	Based on pama1234-light v0.2 IDEA theme
+	See theme.dtd and org.fife.ui.rsyntaxtextarea.Theme for more information.
+-->
+<RSyntaxTheme version="1.0">
+  <!-- Omitting baseFont will use a system-appropriate monospaced. -->
+  <!--<baseFont family="..." size="13"/>-->
+
+  <!--  General editor colors based on pama1234 light theme. -->
+  <background color="DDF4C4" />
+  <caret color="000000" />
+  <selection useFG="false" bg="FFCC00" roundedEdges="false" />
+  <currentLineHighlight color="6FEDFB" fade="false" />
+  <marginLine fg="D0D0D0" />
+  <markAllHighlight color="FFFF00" />
+  <markOccurrencesHighlight color="E4E4FF" border="false" />
+  <matchedBracket fg="000000" bg="CCCCFF" highlightBoth="false" animate="true" />
+  <hyperlinks fg="4F6FCF" />
+  <secondaryLanguages>
+    <language index="1" bg="FFF0CC" />
+    <language index="2" bg="EDFCED" />
+    <language index="3" bg="FFE0F0" />
+  </secondaryLanguages>
+
+  <!-- Gutter styling. -->
+  <gutterBorder color="D0D0D0" />
+  <lineNumbers fg="000000" currentFG="000000"/>
+  <foldIndicator fg="808080" armedFg="000000" iconBg="DDF4C4" iconArmedBg="6FEDFB" />
+  <iconRowHeader activeLineRange="4F6FCF" />
+
+  <!-- Syntax tokens based on pama1234 light theme colors. -->
+  <tokenStyles>
+    <style token="IDENTIFIER" fg="000000" />
+    <style token="RESERVED_WORD" fg="248888" bold="true" />
+    <style token="RESERVED_WORD_2" fg="248888" bold="true" />
+    <style token="ANNOTATION" fg="D53569" />
+    <style token="COMMENT_DOCUMENTATION" fg="3F5FBF" italic="true" />
+    <style token="COMMENT_EOL" fg="008000" italic="true" />
+    <style token="COMMENT_MULTILINE" fg="008000" italic="true" />
+    <style token="COMMENT_KEYWORD" fg="008000" bold="true" />
+    <style token="COMMENT_MARKUP" fg="008000" />
+    <style token="FUNCTION" fg="005984" />
+    <style token="DATA_TYPE" fg="248888" bold="true" />
+    <style token="LITERAL_BOOLEAN" fg="248888" bold="true" />
+    <style token="LITERAL_NUMBER_DECIMAL_INT" fg="2A00EC" />
+    <style token="LITERAL_NUMBER_FLOAT" fg="2A00EC" />
+    <style token="LITERAL_NUMBER_HEXADECIMAL" fg="2A00EC" />
+    <style token="LITERAL_STRING_DOUBLE_QUOTE" fg="7F4794" />
+    <style token="LITERAL_CHAR" fg="7F4794" />
+    <style token="LITERAL_BACKQUOTE" fg="7F4794" />
+    <style token="MARKUP_TAG_DELIMITER" fg="000000" />
+    <style token="MARKUP_TAG_NAME" fg="FB6104" bold="true" />
+    <style token="MARKUP_TAG_ATTRIBUTE" fg="D53569" />
+    <style token="MARKUP_TAG_ATTRIBUTE_VALUE" fg="7F4794" bold="true" />
+    <style token="MARKUP_COMMENT" fg="008000" italic="true" />
+    <style token="MARKUP_DTD" fg="FB6104" />
+    <style token="MARKUP_PROCESSING_INSTRUCTION" fg="FB6104" />
+    <style token="MARKUP_CDATA" fg="7F4794" />
+    <style token="MARKUP_CDATA_DELIMITER" fg="000000" />
+    <style token="MARKUP_ENTITY_REFERENCE" fg="0000FF" bold="true" />
+    <style token="OPERATOR" fg="000000" />
+    <style token="PREPROCESSOR" fg="248888" bold="true" />
+    <style token="REGEX" fg="7F4794" />
+    <style token="SEPARATOR" fg="000000" />
+    <style token="VARIABLE" fg="D53569" bold="true" />
+    <style token="WHITESPACE" fg="000000" />
+    <style token="ERROR_IDENTIFIER" fg="000000" bg="FFCCCC" />
+    <style token="ERROR_NUMBER_FORMAT" fg="000000" bg="FFCCCC" />
+    <style token="ERROR_STRING_DOUBLE" fg="000000" bg="FFCCCC" />
+    <style token="ERROR_CHAR" fg="000000" bg="FFCCCC" />
+  </tokenStyles>
+</RSyntaxTheme>

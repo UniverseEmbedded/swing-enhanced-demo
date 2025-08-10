@@ -1,0 +1,160 @@
+plugins {
+  id 'java'
+  id 'application'
+}
+
+group 'pama1234.dstar'
+version '2.0-SNAPSHOT'
+
+repositories {
+  mavenCentral()
+  exclusiveContent {
+    forRepository {
+      maven { url 'https://jitpack.io' }
+    }
+    filter {
+      includeModule "com.github.Dansoftowner", "jSystemThemeDetector"
+      includeGroup "com.github.goxr3plus"
+    }
+  }
+}
+
+dependencies {
+  // FlatLaf - Modern Look and Feel
+  implementation 'com.formdev:flatlaf:3.6.1'
+
+  // Ikonli - Icon library
+  implementation 'org.kordamp.ikonli:ikonli-swing:12.4.0'
+  implementation 'org.kordamp.ikonli:ikonli-fontawesome-pack:12.4.0'
+
+  // MiGLayout - Layout Manager
+  implementation 'com.miglayout:miglayout-swing:11.4.2'
+
+  // JGoodies Forms - Form layout
+  implementation 'com.jgoodies:jgoodies-forms:1.9.0'
+
+  // RSyntaxTextArea - Syntax highlighting text area
+  implementation 'com.fifesoft:rsyntaxtextarea:3.6.0'
+
+  // JFreeChart - Full charting library
+  implementation 'org.jfree:jfreechart:1.5.6'
+
+  // XChart - Simple charts (轻量级图表库)
+  implementation 'org.knowm.xchart:xchart:3.8.8'
+
+  // GlazedLists - List sorting and filtering
+  implementation 'com.glazedlists:glazedlists:1.11.0'
+
+  // Apache PDFBox - PDF handling
+  implementation 'org.apache.pdfbox:pdfbox:3.0.5'
+
+  // Thumbnailator - Image resizing and manipulation
+  implementation 'net.coobird:thumbnailator:0.4.20'
+
+  // LoboEvolution - HTML rendering engine
+  implementation 'com.github.oswetto:loboevolution:3.0'
+
+  // jSystemThemeDetector - System theme detection
+  implementation 'com.github.Dansoftowner:jSystemThemeDetector:3.6'
+
+  // DockingFrames - Docking Framework
+  implementation 'org.dockingframes:docking-frames-common:1.1.1'
+
+  // ModernDockingUI - Another docking framework
+  implementation 'io.github.andrewauclair.ModernDocking:ModernDockingUI:0.8.2'
+}
+
+application {
+  mainClassName = 'pama1234.dstar.Main'
+}
+
+java {
+  sourceCompatibility = JavaVersion.VERSION_17
+  targetCompatibility = JavaVersion.VERSION_17
+}
+
+tasks.withType(JavaCompile) {
+  options.encoding = 'UTF-8'
+  options.compilerArgs += ['-Xlint:unchecked', '-Xlint:deprecation']
+}
+
+jar {
+  manifest {
+    attributes(
+        'Main-Class': 'pama1234.dstar.Main',
+        'Implementation-Title': 'Swing Enhanced Demo',
+        'Implementation-Version': project.version,
+        'Implementation-Vendor': 'pama1234'
+    )
+  }
+}
+
+// 创建包含所有依赖的fat jar
+task fatJar(type: Jar) {
+  archiveBaseName = project.name + '-all'
+  duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+  from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+  with jar
+
+  manifest {
+    attributes(
+        'Main-Class': 'pama1234.dstar.Main',
+        'Implementation-Title': 'Swing Enhanced Demo',
+        'Implementation-Version': project.version,
+        'Implementation-Vendor': 'pama1234'
+    )
+  }
+}
+
+// 添加运行时JVM参数
+run {
+  jvmArgs = [
+      '-Dapple.laf.useScreenMenuBar=true',
+      '-Dapple.awt.application.name=Swing Enhanced Demo',
+      '-Dfile.encoding=UTF-8'
+  ]
+
+  // 在Windows上启用硬件加速
+  if (System.getProperty('os.name').toLowerCase().contains('windows')) {
+    jvmArgs += ['-Dsun.java2d.d3d=true']
+  }
+}
+
+// 清理任务
+clean {
+  delete 'logs'
+  delete '*.log'
+}
+
+// 自定义任务：检查字体文件
+task checkFonts {
+  doLast {
+    def fontFile = file('src/main/resources/fonts/MapleMonoNormal-NF-CN-Regular.ttf')
+    if (!fontFile.exists()) {
+      println "警告: 自定义字体文件不存在: ${fontFile.path}"
+      println "应用程序将使用系统默认字体"
+    } else {
+      println "字体文件检查通过: ${fontFile.path}"
+    }
+  }
+}
+
+// 在编译前检查字体
+compileJava.dependsOn checkFonts
+
+// 创建源码jar
+task sourcesJar(type: Jar, dependsOn: classes) {
+  archiveClassifier = 'sources'
+  from sourceSets.main.allSource
+}
+
+// 创建JavaDoc jar
+task javadocJar(type: Jar, dependsOn: javadoc) {
+  archiveClassifier = 'javadoc'
+  from javadoc.destinationDir
+}
+
+artifacts {
+  archives sourcesJar
+  archives javadocJar
+}
